@@ -1,0 +1,5 @@
+.about-card .active {
+    background-color: rgb(206, 59, 59);
+    color: white;
+    box-shadow:  0 0 10px #bebebe;
+}

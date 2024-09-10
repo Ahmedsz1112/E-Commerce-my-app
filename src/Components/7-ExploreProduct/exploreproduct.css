@@ -1,0 +1,15 @@
+.add-card {
+    position: absolute;
+    color: white;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    cursor: pointer;
+}
+.pro:hover .add-card{
+    opacity: 1;
+    transition: opacity 0.5s;
+}

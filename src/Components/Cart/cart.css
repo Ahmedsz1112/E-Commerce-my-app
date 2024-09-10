@@ -1,0 +1,12 @@
+.image-cart {
+    width: 80px
+}
+
+.number-cart {
+    width: 60px;
+    padding: 8px;
+}
+.close:hover {
+    cursor: pointer;
+    scale: 0.7;
+}

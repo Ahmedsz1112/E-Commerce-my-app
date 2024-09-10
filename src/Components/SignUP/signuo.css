@@ -1,0 +1,7 @@
+.signup {
+    margin-right: 200px;
+}
+
+.focus:focus {
+    outline: none;
+}

@@ -1,0 +1,8 @@
+.icon-focy:focus  {
+    outline: none;
+    border: none;
+}
+
+.as:hover .icon-header {
+    scale: 0.8;
+}

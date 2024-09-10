@@ -1,0 +1,33 @@
+
+.add-card {
+    position: absolute;
+    color: white;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    opacity: 0;
+    cursor: pointer;
+}
+.new-product:hover .add-card{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.head-phone img {
+    height: 500px;
+}
+
+.time {
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: black;
+}

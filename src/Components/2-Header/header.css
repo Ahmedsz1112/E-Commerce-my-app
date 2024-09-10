@@ -1,0 +1,15 @@
+.search {
+    width: 270px;
+    background-color: rgba(243, 243, 243, 0.671);
+}
+
+.search:focus {
+    outline: none;
+}
+
+.nav-link {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
