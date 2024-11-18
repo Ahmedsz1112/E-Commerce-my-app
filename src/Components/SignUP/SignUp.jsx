@@ -9,14 +9,14 @@ export default function SignUp() {
         <>
             <div className="container">
                 <div className="row my-5 pb-5">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-md-7 col-sm-">
                         <div className="h-100">
                             <img src="./05.jpg" className='w-100 h-100' alt="" />
                         </div>
                     </div>
-                    <div className="col-2">
+                    <div className="col-lg-2 col-md-1 col-sm-">
                     </div>
-                    <div className="col-4 mt-5">
+                    <div className="col-lg-4 col-md-4 col-sm- mt-5">
                         <form action="" >
                             <h3>Create an account</h3>
                             <p className='mb-5'>Enter Your details below</p>

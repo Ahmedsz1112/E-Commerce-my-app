@@ -6,10 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../Details/detais.css';
 import { useContext } from 'react';
 import { ProdutsContext } from '../contextproduct/ContextProduct';
-import { faEye } from '@fortawesome/free-regular-svg-icons';
 import Carts from "../iconsProductAll/Cart";
 import Detail from "../iconsProductAll/Detail";
-
+import Heart from '../iconsProductAll/Heart';
 
 function Details() {
     const [product, setProduct] = useState([]);
@@ -32,15 +31,15 @@ function Details() {
                 <li >Havic HV G-92</li>
             </ul>
             <div className="row my-5 g-4 ">
-                <div className="col-2 ">
+                <div className="col-lg-2 col-md-4 col-sm- ">
                     <img src={product.images} alt={product.title} className="w-100 pb-4 bg-body-secondary"/>
                     <img src={product.images} alt={product.title} className="w-100 pb-4 bg-body-secondary my-4" />
                     <img src={product.images} alt={product.title} className="w-100 pb-4 bg-body-secondary" />
                 </div>
-                <div className="col-6">
+                <div className="col-lg-6 col-md-8 col-sm-">
                     <img src={product.images} alt={product.title} className="w-100 bg-body-secondary h-100" />
                 </div>
-                <div className="col-4 ps-5">
+                <div className="col-lg-4 col-md-12 col-sm- ps-5">
                     <div>
                         <h2>{product.category}</h2>
                         <p className="fs-3">${product.price}</p>
@@ -93,12 +92,19 @@ function Details() {
                     <span className='span-bg'></span>
                     <span className=' align-self-center  fw-bold' style={{ color: "rgb(219, 68, 68)" }}>Related Item</span>
                 </div>
-                <div className="d-flex overflow-hidden my-5">
-                    {data.map((x) => {
-                        return <div className="new-product col-3 px-1" key={x.id}>
+                
+                <div className="row g-3">
+                    {data.filter((e) => {
+                        if (e.id < 9) {
+                            return e;
+                        }
+                    }
+                    ).map((x) => {
+                        return <div className="pro col-lg-3 col-md-6 col-sm-12 px-3" key={x.id}>
                             <div className='p-4 border h-75 text-center position-relative'>
                                 <span className='bg-danger position-absolute top-0 start-0 m-2 text-white px-2 rounded'>sale</span>
                                 <div className=' position-absolute end-0 top-0 d-flex flex-column'>
+                                    <Heart x={x.id}/>
                                     <Detail x={x.id}/>
                                 </div>
                                 <img src={x.images} alt={x.title} className='w-75 h-100' />
@@ -107,7 +113,8 @@ function Details() {
                             <p>{x.title}</p>
                             <p className='text-danger fw-semibold'>${x.price}</p>
                         </div>
-                    })}
+                    }
+                    )}
                 </div>
 
             </div>

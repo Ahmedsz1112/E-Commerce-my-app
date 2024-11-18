@@ -2,10 +2,10 @@ import { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fillContext } from '../contextproduct/ContextProduct';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { faEye } from '@fortawesome/free-regular-svg-icons';
 import { ProdutsContext } from '../contextproduct/ContextProduct';
 import Carts from '../iconsProductAll/Cart';
-
+import Heart from '../iconsProductAll/Heart';
+import Detail from '../iconsProductAll/Detail';
 
 function WishList() {
     const data = useContext(ProdutsContext);
@@ -22,7 +22,7 @@ function WishList() {
             </div>
             <div className="d-flex row g-3 overflow-hidden my-5">
                 {newdata.map((x) => {
-                    return <div className="col-3 " key={x.id}>
+                    return <div className="col-lg-3 col-md-4 col-sm-6 " key={x.id}>
                         <div className='p-4 border h-75 text-center position-relative'>
                             <span className='bg-danger position-absolute top-0 start-0 m-2 text-white px-2 rounded'>sale</span>
                             <div className=' position-absolute end-0 top-0 d-flex flex-column'>
@@ -47,13 +47,20 @@ function WishList() {
                         <button className='btn border px-3 py-2'>See All</button>
                     </div>
                 </div>
-                <div className="d-flex overflow-hidden my-5">
-                    {data.map((x) => {
-                        return <div className="new-product col-3 px-1" key={x.id}>
+
+                <div className="row g-3">
+                    {data.filter((e) => {
+                        if (e.id < 9) {
+                            return e;
+                        }
+                    }
+                    ).map((x) => {
+                        return <div className="pro col-lg-3 col-md-6 col-sm-12 px-3" key={x.id}>
                             <div className='p-4 border h-75 text-center position-relative'>
                                 <span className='bg-danger position-absolute top-0 start-0 m-2 text-white px-2 rounded'>sale</span>
                                 <div className=' position-absolute end-0 top-0 d-flex flex-column'>
-                                    <span className='heart-shop me-2 mt-2 rounded-pill'><FontAwesomeIcon icon={faEye} /></span>
+                                    <Heart x={x.id}/>
+                                    <Detail x={x.id}/>
                                 </div>
                                 <img src={x.images} alt={x.title} className='w-75 h-100' />
                                 <Carts x={x.id}/>
@@ -61,9 +68,9 @@ function WishList() {
                             <p>{x.title}</p>
                             <p className='text-danger fw-semibold'>${x.price}</p>
                         </div>
-                    })}
+                    }
+                    )}
                 </div>
-
             </div>
         </div>
     )

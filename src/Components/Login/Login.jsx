@@ -10,14 +10,14 @@ export default function Login() {
     <div>
       <div className="container">
         <div className="row my-5 pb-5">
-          <div className="col-6">
+          <div className="col-lg-6 col-md-7">
             <div className="h-100">
               <img src="../05.jpg" className='w-100 h-100' alt="" />
             </div>
           </div>
-          <div className="col-2">
+          <div className="col-lg-2 col-md-1">
           </div>
-          <div className="col-4 mt-5">
+          <div className="col-lg-4 col-md-4 mt-5">
             <form action="" >
               <h3>Log in to Exclusive</h3>
               <p className='mb-5'>Enter Your details below</p>
@@ -25,7 +25,7 @@ export default function Login() {
               <input type="password" placeholder='Paeeword' className='w-100 mb-4 border-0 border-bottom pb-2 focus' />
             </form>
             <div className=' d-flex justify-content-between align-items-center'>
-              <Link  className='btn btn-danger text-white py-2 px-5' to='account'>Log in</Link>
+              <Link  className='btn btn-danger text-white py-2 px-3' to='account'>Log in</Link>
               <Link to="" className='ms-2 text-decoration-none text-danger'>Forget Password?</Link>
             </div>
           </div>

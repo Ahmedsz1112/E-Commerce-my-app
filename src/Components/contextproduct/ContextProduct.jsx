@@ -1,9 +1,7 @@
-import { createContext } from "react";
-import axios from 'axios';
-import { useEffect } from 'react';
-import { useState, useMemo } from 'react';
-import { json } from "react-router-dom";
+/* eslint-disable react-hooks/exhaustive-deps */
 
+import { createContext, useEffect, useState, useMemo } from "react";
+import axios from 'axios';
 
 export const ProdutsContext = createContext();
 
@@ -16,79 +14,65 @@ function ContextProduct(props) {
     const [data, setData] = useState([])
 
     async function allProducts() {
-        let { data } = await axios.get("https://dummyjson.com/products");
-        setData(data.products);
+        try {
+            let { data } = await axios.get("https://dummyjson.com/products");
+            setData(data.products);
+        } catch (error) {
+            console.error("Error fetching products", error);
+        }
     };
 
     useEffect(() => {
         allProducts();
     }, [])
 
- 
+    // (Heart)
+    const [newdata, setNewData] = useState(() => {
+        const storedHeart = localStorage.getItem("heart");
+        return storedHeart ? JSON.parse(storedHeart) : [];
+    });
 
-    // myheart
-    let [newdata, setNewData] = useState([]);
-
-    if(localStorage.getItem("heart") != null){
-        newdata = JSON.parse(localStorage.getItem("heart"));
-    }
-    //push
-  
     function handelHeart(id) {
-        let newdataww = [...data]
-        newdataww.filter((e) => {
-            if (e.id === id) {
-                return newdata.push(e)
-            }
-            return e
-        });
-        localStorage.setItem("heart" , JSON.stringify(newdata));
-        setNewData(newdata);
-    };
-
-        
-    //delete
-    function deleteIndex(id) {
-        let newdataww = [...newdata]
-        let dataRow = newdataww.filter((y) => y.id !== id);
-        localStorage.setItem("heart" , JSON.stringify(dataRow));
-        setNewData(dataRow);
-    };
-
-    //deleteAll
-    function deleletAll() {
-        let newdataww = [...newdata]
-        let dataRow = newdataww.filter((y) => !y);
-        localStorage.setItem("heart" , JSON.stringify(dataRow));
-        setNewData(dataRow);
-    };
-
-    // mycard
-    let [card, setCard] = useState([]);
-
-    if(localStorage.getItem("card") != null){
-        card = JSON.parse(localStorage.getItem("card"));
+        const productToAdd = data.find((e) => e.id === id);
+        if (productToAdd && !newdata.some((item) => item.id === id)) {
+            const updatedNewData = [...newdata, productToAdd];
+            setNewData(updatedNewData);
+            localStorage.setItem("heart", JSON.stringify(updatedNewData));
+        }
     }
 
-    //push
+
+    function deleteIndex(id) {
+        const updatedNewData = newdata.filter((item) => item.id !== id);
+        setNewData(updatedNewData);
+        localStorage.setItem("heart", JSON.stringify(updatedNewData)); 
+    }
+
+    function deleletAll() {
+        setNewData([]); 
+        localStorage.removeItem("heart"); 
+    }
+
+    // (Cart)
+    const [card, setCard] = useState(() => {
+        const storedCard = localStorage.getItem("card");
+        return storedCard ? JSON.parse(storedCard) : [];
+    });
+
     function handelCart(id) {
-        let newdataww = [...data]
-        newdataww.filter((e) => {
-            if (e.id === id) {
-                return card.push(e)
-            }
-            return e
-        });
-        localStorage.setItem("card" , JSON.stringify(card));
-        setCard(card);
-    };
+        const productToAdd = data.find((e) => e.id === id);
+        if (productToAdd && !card.some((item) => item.id === id)) {
+            const updatedCard = [...card, productToAdd];
+            setCard(updatedCard);
+            localStorage.setItem("card", JSON.stringify(updatedCard));
+        }
+    }
 
     function deleteCard(id) {
-        let newdataww = [...card]
-        let dataRow = newdataww.filter((y) => y.id !== id);
-        localStorage.setItem("card" , JSON.stringify(dataRow));
-        setCard(dataRow);
-    };
+        const updatedCard = card.filter((item) => item.id !== id);
+        setCard(updatedCard); 
+        localStorage.setItem("card", JSON.stringify(updatedCard)); 
+    }
 
 
     const contextValue = useMemo(() => ({

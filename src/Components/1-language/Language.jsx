@@ -1,8 +1,9 @@
 import React from 'react'
 import '../1-language/language.css'
 
-
+// eslint-disable-next-line import/no-anonymous-default-export
 export default function () {
+
     return (
         <>
             <div className="bg-black text-light">

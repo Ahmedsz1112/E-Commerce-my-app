@@ -2,9 +2,7 @@
 import '../6-SellingProduct/sellingproduct.css'
 import { useEffect, useContext } from 'react';
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ProdutsContext } from '../contextproduct/ContextProduct';
-import { faEye, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Heart from '../iconsProductAll/Heart';
 import Detail from '../iconsProductAll/Detail';
 import Carts from '../iconsProductAll/Cart';
@@ -25,6 +23,10 @@ function SellingProduct() {
         }, 1000);
     }, [])
 
+    let images = {
+        img: '/headphone.jpg'
+    }
+
     return (
         <section className='selling'>
             <div className="container border-top py-5">
@@ -38,13 +40,18 @@ function SellingProduct() {
                         <button className='btn btn-danger px-3 py-2'>View All</button>
                     </div>
                 </div>
-                <div className="d-flex overflow-hidden my-5">
-                    {data.map((x) => {
-                        return <div className="new-product col-3 px-1" key={x.id}>
+                <div className="row my-5">
+                    {data.filter((e) => {
+                        if (e.id < 5) {
+                            return e;
+                        }
+                    }
+                    ).map((x) => {
+                        return <div className="pro col-lg-3 col-md-6 col-sm-12 px-3" key={x.id}>
                             <div className='p-4 border h-75 text-center position-relative'>
                                 <span className='bg-danger position-absolute top-0 start-0 m-2 text-white px-2 rounded'>sale</span>
                                 <div className=' position-absolute end-0 top-0 d-flex flex-column'>
-                                    <Heart x={x.id} />
+                                    <Heart x={x.id}/>
                                     <Detail x={x.id}/>
                                 </div>
                                 <img src={x.images} alt={x.title} className='w-75 h-100' />
@@ -53,12 +60,12 @@ function SellingProduct() {
                             <p>{x.title}</p>
                             <p className='text-danger fw-semibold'>${x.price}</p>
                         </div>
-                    })}
+                    }
+                    )}
                 </div>
 
-
                 <div className='head-phone position-relative'>
-                    <img src="/headphone.jpg" className='w-100' alt="" />
+                    <img src={images.img} className='w-100' alt="" />
                     <div className=' position-absolute top-0 p-5 w-50'>
                         <p style={{ color: "rgb(0, 255, 102)" }}>Categories</p>
                         <h1 className='text-white my-5'>Enhance Your Music Experience</h1>

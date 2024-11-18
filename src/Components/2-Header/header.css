@@ -13,3 +13,13 @@
     padding-bottom: 0 !important;
     padding-top: 0 !important;
 }
+
+.nav-link:hover {
+    width: fit-content !important;
+}
+
+@media (max-width: 800px){
+    .navbar-brand {
+        display: none;
+    }
+}

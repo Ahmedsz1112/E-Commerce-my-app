@@ -27,9 +27,9 @@ function Category() {
                         <span className='arrow-roun'><FontAwesomeIcon icon={faArrowRight} /></span>
                     </div>
                 </div>
-                <div className="row my-5">
+                <div className="row g-3 my-5">
                     {data.map((x, index) => {
-                        return <div className='col-2' key={index}>
+                        return <div className='col-lg-2 col-md-3 col-sm-6' key={index}>
                             <div className='text-center border rounded '>
                                 <p className='fs-3 mt-4'>{x.img}</p>
                                 <p className='mb-4'>{x.title}</p>

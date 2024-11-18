@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom'
 import Language from '../1-language/Language'
 import ContextProduct from '../contextproduct/ContextProduct'
 
+
 export default function Layout() {
 
   return (

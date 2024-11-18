@@ -63,7 +63,7 @@ function Products() {
                     </div>
                 </div>
             </div>
-            <div className="d-flex overflow-hidden my-5 ms-5 ps-5 scroll-arr  ">
+            <div className="d-flex overflow-hidden my-5 ms-5 ps-5 scroll-arr">
                 {data.map((x) => {
                     return <div className="products col-3 px-3" key={x.id}>
                         <div className='p-4 border h-75 text-center position-relative'>

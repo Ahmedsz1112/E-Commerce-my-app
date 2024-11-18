@@ -25,5 +25,15 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    display: none;
+    opacity: 0;
+}
+
+.action {
+    opacity: 1;
+}
+
+@media (max-width: 600px){
+    .speaker {
+        margin-top: 20px;
+    }
 }

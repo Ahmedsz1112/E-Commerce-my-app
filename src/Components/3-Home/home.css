@@ -20,3 +20,10 @@
 .carousel-item img {
     height: 360px;
 }
+
+
+@media (max-width: 800px){
+    .home-image {
+        padding-left: 0 !important;
+    }
+}

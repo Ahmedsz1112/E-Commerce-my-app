@@ -15,20 +15,20 @@ export default function About() {
         <li >About</li>
       </ul>
       <div className='d-flex justify-content-between'>
-        <div className="row">
-          <div className="col-6 d-flex flex-column justify-content-center">
+        <div className="row g-4">
+          <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center">
             <h1 className='my-4'>Our Story</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique autem sit, amet, delectus dolorum rem, nam rerum praesentium eos illum earum recusandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique autem sit, amet, delectus dolorum rem, nam rerum praesentium eos illum earum recusandae.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique autem sit, amet, delectus dolorum rem, nam rerum praesentium eos illum earum recusandae.</p>
           </div>
-          <div className='col-6'>
+          <div className='col-lg-6 col-md-12'>
             <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
           </div>
         </div>
       </div>
 
       <div className="row py-5 mt-5 g-4">
-        <div className="col-3 ">
+        <div className="col-lg-3 col-md-4 col-sm-6 ">
           <div className="card d-flex flex-column  align-items-center rounded ">
             <div className='icons mt-3'>
               <FontAwesomeIcon icon={faTruck} className='fs-4' />
@@ -37,7 +37,7 @@ export default function About() {
             <p>Free delivery for all</p>
           </div>
         </div>
-        <div className="col-3 about-card">
+        <div className="col-lg-3 col-md-4 col-sm-6 about-card">
           <div className="card active d-flex flex-column  align-items-center rounded">
             <div className='icons mt-3'>
               <FontAwesomeIcon icon={faHeadphones} className='fs-4' />
@@ -47,7 +47,7 @@ export default function About() {
           </div>
 
         </div>
-        <div className="col-3 ">
+        <div className="col-lg-3 col-md-4 col-sm-6 ">
           <div className="card d-flex flex-column  align-items-center rounded">
             <div className='icons mt-3'>
               <FontAwesomeIcon icon={faCircleCheck} className='fs-4' />
@@ -56,7 +56,7 @@ export default function About() {
             <p>Free delivery for all</p>
           </div>
         </div>
-        <div className="col-3 ">
+        <div className="col-lg-3 col-md-4 col-sm-6 ">
           <div className="card d-flex flex-column  align-items-center rounded">
             <div className='icons mt-3'>
               <FontAwesomeIcon icon={faCircleCheck} className='fs-4' />
@@ -80,7 +80,7 @@ export default function About() {
           <div class="carousel-inner">
             <div class="carousel-item">
               <div className="row g-4">
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -94,7 +94,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -108,7 +108,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -126,7 +126,7 @@ export default function About() {
             </div>
             <div class="carousel-item">
               <div className="row g-4">
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -140,7 +140,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -154,7 +154,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -172,7 +172,7 @@ export default function About() {
             </div>
             <div class="carousel-item active">
               <div className="row g-4">
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -186,7 +186,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -200,7 +200,7 @@ export default function About() {
                     </div>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="">
                     <img src="/women.jpg" className='w-100 mb-4 rounded' alt="" />
                     <div>
@@ -312,22 +312,22 @@ export default function About() {
         </div>
       </div>
       <div>
-        <div className="row py-5 mt-5">
-          <div className="col-4 d-flex flex-column  align-items-center">
+        <div className="row py-5 mt-5 g-4">
+          <div className="col-lg-4 col-md-6 col-sm-12 d-flex flex-column  align-items-center">
             <div className='icons'>
               <FontAwesomeIcon icon={faTruck} className='fs-4' />
             </div>
             <h4>Free And Fast Delivery</h4>
             <p>Free delivery for all Orders over $140</p>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
+          <div className="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
             <div className='icons'>
               <FontAwesomeIcon icon={faHeadphones} className='fs-4' />
             </div>
             <h4>24/7 CUSTOMER SERVICE</h4>
             <p>Free delivery for all Orders over $140</p>
           </div>
-          <div className="col-4 d-flex flex-column align-items-center">
+          <div className="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
             <div className='icons'>
               <FontAwesomeIcon icon={faCircleCheck} className='fs-4' />
             </div>

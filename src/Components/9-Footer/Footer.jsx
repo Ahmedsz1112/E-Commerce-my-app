@@ -7,7 +7,7 @@ function Footer(){
         <footer className='pt-5 bg-black text-white'>
             <div className="container my-5">
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-6  col-sm-">
                         <h4 className='mb-4'>Exclusive</h4>
                         <h6 className='mb-4'>subscribe</h6>
                         <p>Get 10% off your First order</p>
@@ -16,13 +16,13 @@ function Footer(){
                             <FontAwesomeIcon icon={faPaperPlane}/>
                         </form>
                     </div> 
-                    <div className="col-2">
+                    <div className="col-lg-2 col-md-6  col-sm-">
                         <h4 className='mb-4'>Support</h4>
                         <p>111 Bijoy sarani, Dhaka,<br/> DH 1515, Bangladesh</p>
                         <p>exclusive@gmail.com</p>
                         <p>+88015-88888-9999</p>
                     </div>
-                    <div className="col-2">
+                    <div className="col-lg-2 col-md-4 col-sm-">
                         <h4 className='mb-4'>Account</h4>
                         <p>My Account</p>
                         <p>Login / Register</p>
@@ -30,14 +30,14 @@ function Footer(){
                         <p>Wishlist</p>
                         <p>Shop</p>
                     </div>
-                    <div className="col-2">
+                    <div className="col-lg-2 col-md-4 col-sm-">
                         <h4 className='mb-4'>Quick Link</h4>
                         <p>Privacy Policy</p>
                         <p>Terms Of Use</p>
                         <p>FAQ</p>
                         <p>Contact</p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-4  col-sm-">
                         <h4 className='mb-4'>Download App</h4>
                         <p className=" opacity-50">Save S3 With App New User Only</p>
                         <div className='row'>

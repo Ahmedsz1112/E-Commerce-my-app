@@ -11,6 +11,7 @@ import Carts from '../iconsProductAll/Cart';
 function ExploreProduct() {
     const data = useContext(ProdutsContext);
 
+
     return (
         <section className='explore'>
             <div className="container">
@@ -32,7 +33,7 @@ function ExploreProduct() {
                         }
                     }
                     ).map((x) => {
-                        return <div className="pro col-3 px-3" key={x.id}>
+                        return <div className="pro col-lg-3 col-md-6 col-sm-12 px-3" key={x.id}>
                             <div className='p-4 border h-75 text-center position-relative'>
                                 <span className='bg-danger position-absolute top-0 start-0 m-2 text-white px-2 rounded'>sale</span>
                                 <div className=' position-absolute end-0 top-0 d-flex flex-column'>

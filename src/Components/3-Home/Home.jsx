@@ -10,12 +10,20 @@ import ExploreProduct from '../7-ExploreProduct/ExploreProduct';
 import Featured from '../8-Featured/Featured';
 
 function Home() {
+    let images = {
+        img1: '/01.jpg',
+        img2: '/02.jpg',
+        img3: '/03.jpg',
+        img4: '/04.jpg',
+        img5: '/05.jpg',
+    }    
+
     return (
         <>
             <section className='home'>
                 <div className="container">
                     <div className="row">
-                        <div className="col-3 pt-5 border-end">
+                        <div className="col-lg-3 col-md-12 pt-5 border-end">
                             <ul className="list-group list-group-flush ">
                                 <li className="list-group-item fs-6 d-flex justify-content-between align-items-center">Woman's Fashion
                                     <FontAwesomeIcon icon={faChevronRight} />
@@ -32,7 +40,7 @@ function Home() {
                                 <li className="list-group-item fs-6">Health & Beauly</li>
                             </ul>
                         </div>
-                        <div className="col-9 mt-5 ps-5">
+                        <div className="col-lg-9 col-md-12 mt-5 home-image">
                             <div id="carouselExampleCaptions" className="carousel slide">
                                 <div className="carousel-indicators">
                                     <button className="btn-carous " type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
@@ -43,7 +51,7 @@ function Home() {
                                 </div>
                                 <div className="carousel-inner height-contant">
                                     <div className="carousel-item">
-                                        <img src="/01.jpg" className="w-100 img-fluid" alt="..." />
+                                        <img src={images.img1} className="w-100 img-fluid" alt="..." />
                                         <div className="mx-5 my-5 d-none d-md-block position-absolute top-0 start-0 text-white">
                                             <p className='my-3 d-flex fs-4 align-content-center'><FontAwesomeIcon icon={faApple} className='fs-1 me-3' /> iphone 14 series</p>
                                             <h2 className='py-3'>up to 10% <br /> off Voucher</h2>
@@ -51,10 +59,10 @@ function Home() {
                                         </div>
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="/02.jpg" className="w-100 img-fluid" alt="..." />
+                                        <img src={images.img2} className="w-100 img-fluid" alt="..." />
                                     </div>
                                     <div className="carousel-item active">
-                                        <img src="/05.jpg" className="w-100 img-fluid" alt="..." />
+                                        <img src={images.img5} className="w-100 img-fluid" alt="..." />
                                         <div className="mx-5 my-5 d-none d-md-block position-absolute top-0 start-0 text-white">
                                             <p className='my-3 d-flex fs-4 align-content-center'><FontAwesomeIcon icon={faApple} className='fs-1 me-3' /> iphone 14 series</p>
                                             <h2 className='py-3'>up to 10% <br /> off Voucher</h2>
@@ -62,7 +70,7 @@ function Home() {
                                         </div>
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="/04.jpg" className="w-100 img-fluid" alt="..." />
+                                        <img src={images.img4} className="w-100 img-fluid" alt="..." />
                                         <div className="mx-5 my-5 d-none d-md-block position-absolute top-0 start-0 text-white">
                                             <p className='my-3 d-flex fs-4 align-content-center'><FontAwesomeIcon icon={faApple} className='fs-1 me-3' /> iphone 14 series</p>
                                             <h2 className='py-3'>up to 10% <br /> off Voucher</h2>
@@ -70,7 +78,7 @@ function Home() {
                                         </div>
                                     </div>
                                     <div className="carousel-item">
-                                        <img src="/03.jpg" className="w-100 img-fluid" alt="..." />
+                                        <img src={images.img3} className="w-100 img-fluid" alt="..." />
                                         <div className="mx-5 my-5 d-none d-md-block position-absolute top-0 start-0 text-white">
                                             <p className='my-3 d-flex fs-4 align-content-center'><FontAwesomeIcon icon={faApple} className='fs-1 me-3' /> iphone 14 series</p>
                                             <h2 className='py-3'>up to 10% <br /> off Voucher</h2>

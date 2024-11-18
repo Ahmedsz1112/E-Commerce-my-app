@@ -53,3 +53,9 @@
     justify-content: center;
     cursor: pointer;
 }
+
+@media (max-width: 800px){
+    .scroll-arr {
+        padding-left: 0 !important;
+    }
+}
